@@ -1,0 +1,98 @@
+'use strict';
+const a14_0xd92776 = a14_0x1d36;
+(function (_0x5d8523, _0x384a3d) {
+    const _0x109ea2 = a14_0x1d36, _0x14db1a = _0x5d8523();
+    while (!![]) {
+        try {
+            const _0x35561f = parseInt(_0x109ea2(0xce)) / 0x1 * (-parseInt(_0x109ea2(0xc1)) / 0x2) + -parseInt(_0x109ea2(0xc9)) / 0x3 * (-parseInt(_0x109ea2(0xcb)) / 0x4) + -parseInt(_0x109ea2(0xd9)) / 0x5 + parseInt(_0x109ea2(0xd4)) / 0x6 + parseInt(_0x109ea2(0xc6)) / 0x7 * (-parseInt(_0x109ea2(0xd7)) / 0x8) + -parseInt(_0x109ea2(0xc0)) / 0x9 * (-parseInt(_0x109ea2(0xd3)) / 0xa) + -parseInt(_0x109ea2(0xca)) / 0xb;
+            if (_0x35561f === _0x384a3d)
+                break;
+            else
+                _0x14db1a['push'](_0x14db1a['shift']());
+        } catch (_0x40dd90) {
+            _0x14db1a['push'](_0x14db1a['shift']());
+        }
+    }
+}(a14_0xcf9a, 0x6d5e2));
+const ItemsetCollections = require(a14_0xd92776(0xc2)), Itemset = require(a14_0xd92776(0xd6)), Bit = require(a14_0xd92776(0xcf)), AssociationRules = require(a14_0xd92776(0xd0));
+class Apriori {
+    static [a14_0xd92776(0xc5)](_0x5a873e, _0x4d0074) {
+        const _0x5804e6 = a14_0xd92776;
+        let _0x3caf4b = _0x5a873e[_0x5804e6(0xc8)](), _0x517e61 = new ItemsetCollections(), _0x405cb1 = new ItemsetCollections(), _0x6374df = new ItemsetCollections();
+        for (var _0x264867 = 0x0; _0x264867 < _0x3caf4b[_0x5804e6(0xd5)]; _0x264867 += 0x1) {
+            _0x517e61['push'](Itemset[_0x5804e6(0xcc)]([_0x3caf4b[_0x264867]]));
+        }
+        let _0x1e07e7 = 0x2;
+        while (_0x517e61[_0x5804e6(0xd5)] != 0x0) {
+            _0x6374df[_0x5804e6(0xc3)]();
+            for (var _0x2d39a7 in _0x517e61) {
+                let _0x21ae0a = _0x517e61[_0x2d39a7];
+                _0x21ae0a[_0x5804e6(0xcd)] = _0x5a873e['cariAprioriSupport'](_0x21ae0a), _0x21ae0a[_0x5804e6(0xcd)] >= _0x4d0074 && (_0x6374df['push'](_0x21ae0a), _0x405cb1[_0x5804e6(0xbf)](_0x21ae0a));
+            }
+            _0x517e61[_0x5804e6(0xc3)]();
+            let _0x721e5c = Bit['findSubsets'](_0x6374df['getItemUnik'](), _0x1e07e7);
+            _0x721e5c['forEach'](_0x142bea => _0x517e61[_0x5804e6(0xbf)](_0x142bea)), _0x1e07e7++;
+        }
+        return _0x405cb1;
+    }
+    static [a14_0xd92776(0xd1)](_0x45205c, _0x5eea34, _0x34a63e) {
+        const _0x251157 = a14_0xd92776;
+        let _0x3dcb30 = [];
+        for (var _0x10ab61 in _0x5eea34) {
+            let _0x20117f = _0x5eea34[_0x10ab61], _0x583257 = Bit['findSubsets'](_0x20117f, 0x0);
+            for (var _0x481c15 in _0x583257) {
+                let _0x34762f = _0x583257[_0x481c15], _0x2c0d2b = _0x45205c[_0x251157(0xd2)](_0x20117f) / _0x45205c[_0x251157(0xd2)](_0x34762f) * 0x64;
+                if (_0x2c0d2b >= _0x34a63e) {
+                    let _0x547467 = new AssociationRules();
+                    _0x34762f[_0x251157(0xbe)](_0xc6b424 => _0x547467['X'][_0x251157(0xbf)](_0xc6b424)), _0x20117f[_0x251157(0xc7)](_0x34762f)[_0x251157(0xbe)](_0x8cb3c3 => _0x547467['Y']['push'](_0x8cb3c3)), _0x547467['Support'] = _0x45205c['cariAprioriSupport'](_0x20117f), _0x547467[_0x251157(0xc4)] = _0x2c0d2b, _0x547467['X'][_0x251157(0xd5)] > 0x0 && _0x547467['Y'][_0x251157(0xd5)] > 0x0 && _0x3dcb30[_0x251157(0xbf)](_0x547467);
+                }
+            }
+        }
+        return _0x3dcb30;
+    }
+}
+module[a14_0xd92776(0xd8)] = Apriori;
+function a14_0x1d36(_0x3dc250, _0x25e6e7) {
+    const _0xcf9a42 = a14_0xcf9a();
+    return a14_0x1d36 = function (_0x1d3688, _0x3fd767) {
+        _0x1d3688 = _0x1d3688 - 0xbe;
+        let _0x45b01d = _0xcf9a42[_0x1d3688];
+        return _0x45b01d;
+    }, a14_0x1d36(_0x3dc250, _0x25e6e7);
+}
+function a14_0xcf9a() {
+    const _0x2eb49e = [
+        'Confidence',
+        'getSupport',
+        '21JeWVkh',
+        'hapusItemset',
+        'getItemUnik',
+        '3nzzIwZ',
+        '7212040bYYLGe',
+        '3118924XXNdIh',
+        'from',
+        'Support',
+        '7xrLbGq',
+        './Bit',
+        './AssociationRules',
+        'getConfidence',
+        'cariAprioriSupport',
+        '1365610rToYFi',
+        '4820358UoXvMD',
+        'length',
+        './Itemset',
+        '218808mtuiUa',
+        'exports',
+        '1337290UNdABO',
+        'forEach',
+        'push',
+        '27DpKQJj',
+        '154196rQFisu',
+        './ItemsetCollections',
+        'clear'
+    ];
+    a14_0xcf9a = function () {
+        return _0x2eb49e;
+    };
+    return a14_0xcf9a();
+}
